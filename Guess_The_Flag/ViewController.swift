@@ -60,7 +60,7 @@ class ViewController: UIViewController {
             score -= 1
         }
         if numberOfQuestion <= 10 {
-            let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+            let ac = UIAlertController(title: title, message: "The right answer is \(countries[correctAnswer]) \n Your score is \(score)", preferredStyle: .alert)
             
             ac.addAction(UIAlertAction(title: "Continue to question \(numberOfQuestion)", style: .default, handler: askQuestion))
             
