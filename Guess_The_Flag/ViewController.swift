@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var numberOfQuestion = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,8 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
         
+        numberOfQuestion += 1
+        
         if sender.tag == correctAnswer {
             title = "Correct"
             score += 1
@@ -56,12 +59,14 @@ class ViewController: UIViewController {
             title = "Wrong"
             score -= 1
         }
+        if numberOfQuestion <= 10 {
+            let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+            
+            ac.addAction(UIAlertAction(title: "Continue to question \(numberOfQuestion)", style: .default, handler: askQuestion))
+            
+            present(ac, animated: true)
+        }
         
-        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-        
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        
-        present(ac, animated: true)
     }
     
 
