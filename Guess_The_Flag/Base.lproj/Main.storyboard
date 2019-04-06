@@ -22,20 +22,22 @@
                                 <rect key="frame" x="184" y="100" width="200" height="100"/>
                                 <state key="normal" image="us"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVo-2G-Of5">
-                                <rect key="frame" x="184" y="230" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVo-2G-Of5">
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
                                 <state key="normal" image="us"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt7-AQ-5fO">
-                                <rect key="frame" x="184" y="360" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt7-AQ-5fO">
+                                <rect key="frame" x="107" y="360" width="200" height="100"/>
                                 <state key="normal" image="us"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YVo-2G-Of5" firstAttribute="centerX" secondItem="o9d-4W-fvb" secondAttribute="centerX" id="5kW-9j-PAo"/>
+                            <constraint firstItem="qt7-AQ-5fO" firstAttribute="centerX" secondItem="YVo-2G-Of5" secondAttribute="centerX" id="CNy-UB-cJI"/>
                             <constraint firstItem="o9d-4W-fvb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="ayk-Y1-jjf"/>
+                            <constraint firstItem="qt7-AQ-5fO" firstAttribute="top" secondItem="YVo-2G-Of5" secondAttribute="bottom" constant="30" id="gOu-Va-EQc"/>
+                            <constraint firstItem="YVo-2G-Of5" firstAttribute="top" secondItem="o9d-4W-fvb" secondAttribute="bottom" constant="30" id="gyT-5f-o1P"/>
                             <constraint firstItem="o9d-4W-fvb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kki-AE-zFO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
