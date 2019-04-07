@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Guess The Flag"
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(scoreTapped))
 
         countries += ["estonia","france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
@@ -69,6 +73,21 @@ class ViewController: UIViewController {
         
     }
     
+    @objc func scoreTapped() {
+        
+        let alertController = UIAlertController(title: "Score", message: "Your score is: \(score)", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        present(alertController, animated: true)
+        //        let vc = UIActivityViewController(activityItems: [score], applicationActivities: [])
+        //        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        //        present(vc, animated: true)
+        
+        
+        }
+        
 
-}
+    }
+    
+
+
 
